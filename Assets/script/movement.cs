@@ -48,8 +48,8 @@ public class movement : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)){
-            Cursor.lockState = CursorLockMode.Locked;
-            SceneManager.LoadScene("settings");
+            SceneManager.LoadScene("startMenu");
+            Cursor.lockState = CursorLockMode.None;
         }
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
